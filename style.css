@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f4e4;
+    color: #1e1e1e;
+}
+
+.navbar {
+    background-color: #002447;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.navbar ul li {
+    margin-right: 1rem;
+}
+
+.navbar ul li a {
+    color: #f9f4e4;
+    text-decoration: none;
+}
+
+.logo {
+    background-color: #ffd700;
+    color: #002447;
+    padding: 0.5rem 1rem;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.about, .skills, .hobbies, .gallery, .news, .contacts {
+    padding: 2rem;
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 10%;
+    border: 2px solid #002447;
+}
+
+.footer {
+    background-color: #002447;
+    padding: 1rem;
+    color: #f9f4e4;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
