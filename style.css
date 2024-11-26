@@ -7,7 +7,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f9f4e4;
-    color: #1e1e1e;
+    color: #1e1e1e; 
 }
 
 .navbar {
@@ -30,6 +30,12 @@ body {
 .navbar ul li a {
     color: #f9f4e4;
     text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #ffd700; /* Gold for hover highlight */
+    text-decoration: underline;
 }
 
 .logo {
@@ -57,14 +63,111 @@ body {
     height: 150px;
     border-radius: 10%;
     border: 2px solid #002447;
+    object-fit: cover; /* Ensures image content fits without distortion */
+}
+
+.skills-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.skill {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skill-name {
+    font-size: 1.2rem;
+    width: 30%;
+}
+
+.progress-bar {
+    width: 60%;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 20px;
+    position: relative;
+}
+
+.progress {
+    background-color: #002447;
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.3s ease-in-out;
+    width: calc(var(--skill-percent, 50) * 1%); /* Dynamic width based on percentage */
+}
+
+.percentage {
+    width: 10%;
+    text-align: right;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+    color: #002447;
+    font-weight: bold;
+}
+
+.skills-chart img, .gallery-images img {
+    max-width: 100%;
+}
+
+.gallery-images img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Ensures square aspect ratio */
+    object-fit: cover; /* Ensures the image fills the square area without distortion */
+}
+
+.gallery-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+@media (max-width: 768px) {
+    .gallery-images {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-images {
+        grid-template-columns: 1fr;
+    }
+}
+
+.hobby-list {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+
+.hobby {
+    text-align: center;
+}
+
+.contacts ul {
+    list-style: none;
+}
+
+.contacts ul li {
+    margin-top: 1rem;
+}
+
+.contacts ul li a {
+    color: #002447;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .footer {
     background-color: #002447;
-    padding: 1rem;
     color: #f9f4e4;
     text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    padding: 2rem 1rem; /* More padding for better spacing */
+    font-size: 0.9rem;
 }
